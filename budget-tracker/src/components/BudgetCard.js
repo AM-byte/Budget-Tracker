@@ -31,16 +31,15 @@ export default function BudgetCard({ name, amount, max, gray }) {
             <Stack direction="horizontal" gap="2" className="mt-4">
                 <Button variant="outline-primary" className="ms-auto">
                     Add Expense</Button>
-                <Button variant="outline-secondary">Add Expense</Button>
+                <Button variant="outline-secondary">View Expense</Button>
             </Stack>
         </Card.Body>
     </Card>
     )
-    }
-
-    function getProgressBarVariant(amount, max) {
-    const ratio = amount / max
-    if (ratio < 0.5) return "primary"
+}
+function getProgressBarVariant(amount, max) {
+  const ratio = amount / max
+  if (ratio < 0.5) return "primary"
     if (ratio < 0.75) return "warning"
     return "danger"
 }
